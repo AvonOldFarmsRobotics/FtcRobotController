@@ -41,6 +41,7 @@ public class MechnumTeleOp extends LinearOpMode {
         }
     }
 
+    // Controls and manipulates the robot from the given controller inputs
     private void motorControl(){
 
         // Strafe (front wheels going against back wheels)
