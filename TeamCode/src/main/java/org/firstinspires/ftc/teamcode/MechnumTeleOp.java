@@ -92,10 +92,13 @@ public class MechnumTeleOp extends LinearOpMode {
 
         // Softmax the motorPower matrix
         // Basically, this maps the range of the numbers in the motorPowers matrix to values from 0 to 1
-        for(int i = 0; i < motorPowers.length; i++){
-            for(int j = 0; j < motorPowers[i].length; j++){
-                motorPowers[i][j] /= max;
+        if(max > 1f){
+            for(int i = 0; i < motorPowers.length; i++){
+                for(int j = 0; j < motorPowers[i].length; j++){
+                    motorPowers[i][j] /= max;
+                }
             }
         }
+
     }
 }
